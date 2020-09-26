@@ -1079,6 +1079,25 @@ files:
 
     # Create your tests here.
   learner_created: false
+- name: db.test.sqlite3
+  visible: true
+  learner_created: true
+- name: hyperjob/db.sqlite3
+  visible: true
+  learner_created: true
+- name: hyperjob/vacancy/migrations/0001_initial.py
+  visible: true
+  learner_created: true
+- name: hyperjob/resume/migrations/0001_initial.py
+  visible: true
+  learner_created: true
+- name: hyperjob/vacancy/migrations/0002_delete_resume.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/94/stages/519/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/94/stages/519/implement">JetBrains
+    Academy</a>
+  time: Sat, 26 Sep 2020 15:51:49 UTC
 record: -1
