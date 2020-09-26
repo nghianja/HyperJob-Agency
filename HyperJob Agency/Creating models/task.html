@@ -1,0 +1,22 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>The "<em>HyperJob</em>" recruitment agency is a very conservative one. Its history starts on January 1st, 1970 . The managers in the agency prefer communicating by phone or email and searching for employees personally. That was an efficient strategy some ten years ago, but now the candidates prefer to apply for jobs online. The problem is that "<em>HyperJob</em>" still doesn't have a site, so they need you to create the service as soon as possible.</p>
+
+<p>We start with a simple site that will be suitable for:</p>
+
+<ul>
+	<li>Creating a new vacancy by the agency's manager</li>
+	<li>Creating a new resume by a candidate</li>
+</ul>
+
+<p>We know that it will be a long road, so at each stage you will make only a small part of work. By the end, we'll have a working site that fulfills all the requirements.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your first task is to prepare the models for the data. It's important to keep all the data safe. We need to store all the vacancies and resumes persistently in the database. Create models to manage the database tables.</p>
+
+<p><div class="alert alert-primary"> Use the default settings of the project with a predefined <em>SQLite</em> database. </div></p>
+
+<p>Throughout the project, we will need at least two models: <code class="java">Vacancy</code> and <code class="java">Resume</code>. Both of them should have the <code class="java">description</code> and <code class="java">author</code> fields. The <code class="java">description</code> is a text field with no more than 1024 symbols, and the <code class="java">author</code> is a foreign key to <code class="java">django.contrib.auth.models.User</code> model.</p>
+
+<p>Define <code class="java">Vacancy</code> and <code class="java">Resume</code> in <em>models.py </em>module and migrate them to the database. We check your work this time, so that at the next steps you are confident enough to add new models by yourself.</p>

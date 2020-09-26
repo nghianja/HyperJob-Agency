@@ -1,0 +1,24 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>The agency wants to launch the site this month. However, not all the pages will be ready at that moment. We should create two particular pages to make the site work. Without the list of vacancies and the list of resumes the service has no meaning, so we need to create these pages first.</p>
+
+<p>Let's look at the design of the pages.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your task is to create the vacancies and resumes pages. We'll show the list of items one by one without any sorting. You can add any additional information on the page if you like, but every item from the list should satisfy the given design:</p>
+
+<ol>
+	<li>Each resume or vacancy should be in a separate <code class="language-python">&lt;div&gt;</code> element</li>
+	<li>The text in an element should be "<em>&lt;author&gt;: &lt;description&gt;</em>", where <em>&lt;author&gt; </em>is the <code class="language-python">username</code> field of the <code class="language-python">User</code> model.
+	<p>Example: <code class="language-python">&lt;div&gt;Pierre: Product Designer&lt;/div&gt;</code></p>
+	</li>
+</ol>
+
+<p>If you start the application on your computer with <code class="language-python">python manage.py runserver</code> command, the vacancies list should be available at the address <em>localhost:8000/vacancies</em> and resumes on <em>localhost:8000/resumes</em>.</p>
+
+<p>To combine a <a target="_blank" href="https://docs.djangoproject.com/en/2.2/topics/class-based-views/intro/#handling-forms-with-class-based-views" rel="noopener noreferrer nofollow" target="_blank">template with the HTTP handler</a> you can use <code class="language-python">django.shortcuts.render</code> function. To pass any arguments to the template, add the dictionary to the <code class="language-python">render</code> function:</p>
+
+<pre><code class="language-python">render(request, template_name, {'name_you_are_using_in_template': your_variable})</code></pre>
+
+<p><div class="alert alert-warning"> Tests for your project are running on a prepared independent database. Do not bother about the data you have in yours. </div></p>

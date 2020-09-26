@@ -1,0 +1,19 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>You've made an authentication for the service, but the users still do not have profile pages where they can publish their resumes. This page will allow the users to find a job they like.</p>
+
+<p>This is the last stage, and the company highly appreciates your participation in the project.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your task is to add handlers for creating vacancies and resumes. We need to make a new page for a user profile. On this page, there will be two handlers to create new resumes and vacancies. Only the managers create vacancies, and only the candidates can create resumes. When a user creates a new item, it should appear on the appropriate page.</p>
+
+<p>How can we distinguish managers from users? The <code class="java">django.contrib.auth.models.User</code> has a boolean field <code class="java">is_staff</code>. If an authenticated user is a member of staff, this user is a manager. Otherwise, the user is a candidate. Non-authenticated users are not allowed to create vacancies and resumes at all. To check if a user is authenticated you can use <code class="java">request.user.is_authenticated</code> property in your handler.</p>
+
+<p>You can use an HTML form or define form with Django forms if you want. The form for creating vacancies or resumes should be on the profile page. The main requirement is that the handlers should receive only one <em>POST</em> parameter: <code class="java">description</code>. That's enough to create a new item.</p>
+
+<p>If a request is successful, redirect the user back to their profile; otherwise, respond with <strong>403(Forbidden)</strong> status code.</p>
+
+<p>If you start the application on your computer with the <code class="java">python manage.py runserver</code> command, the profile page should be available at  <em>localhost:8000/home</em>, a new resume can be created at <em>localhost:8000/resume/new</em>, and a new vacancy at <em>localhost:8000/vacancy/new</em>.</p>
+
+<p><div class="alert alert-warning"> Do not forget to use <em>POST</em> handlers for the creation of resumes and vacancies. </div></p>

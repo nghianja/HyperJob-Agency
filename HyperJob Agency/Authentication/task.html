@@ -1,0 +1,34 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>Success! We've met the deadline, and the service started working. The agency's receiving a lot of emails and phone calls right now, but there are also complaints: the users still cannot log in to publish their resumes.</p>
+
+<p>The CTO of <em>HyperJob</em> has written you an email:</p>
+
+<pre><code class="language-html">FROM: oficial@hyperjob.com
+TO: you@hyperjob.com
+DATE: today
+SUBJECT: Thanks for the great work
+
+We take a tremendous step towards a bright future.
+It's a great pleasure to have such professionals like you in our team!
+Could you start working on user authentication next? </code></pre>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your task is to create the authentication for the service. The service needs two pages to authenticate users: signup and login. On the signup page, the users register their accounts, and on the login page they pass the authentication by their username and password.</p>
+
+<p>Please use <code class="language-python">django.contrib.auth.forms.UserCreationForm</code> for your signup handler and <code class="language-python">django.contrib.auth.forms.AuthenticationForm</code> for the login handler.</p>
+
+<p>If the login request is successful, redirect the user to the menu page.</p>
+
+<p>If you start the application on your computer with <code class="language-html">python manage.py runserver</code> command, the signup page should be available at the address <em>localhost:8000/signup</em> and login on <em>localhost:8000/login</em>.</p>
+
+<p>Pay attention, that the <em>login</em> and <em>signup</em> URLs do not contain a slash at the end, so your URL patterns should not too. You can redirect GET requests to the right page with help or <code class="language-html">RedirectView</code> if you need to:</p>
+
+<pre><code class="language-python">from django.views.generic import RedirectView
+ 
+urlpatterns = [
+   # some other patterns
+   path('login/', RedirectView.as_view(url='/login'))
+   path('signup/', RedirectView.as_view(url='/signup'))
+]</code></pre>
