@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperJob Agency :: Resumes</title>
+</head>
+<body>
+<h2>Resumes</h2>
+{% if resumes %}
+    {% for resume in resumes %}
+        <div>{{ resume.author }}: {{ resume.description }}</div>
+    {% endfor %}
+{% else %}
+    <p>No resumes are available.</p>
+{% endif %}
+</body>
+</html>

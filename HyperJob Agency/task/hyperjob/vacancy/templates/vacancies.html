@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperJob Agency :: Vacancies</title>
+</head>
+<body>
+<h2>Vacancies</h2>
+{% if vacancies %}
+    {% for vacancy in vacancies %}
+        <div>{{ vacancy.author }}: {{ vacancy.description }}</div>
+    {% endfor %}
+{% else %}
+    <p>No vacancies are available.</p>
+{% endif %}
+</body>
+</html>
