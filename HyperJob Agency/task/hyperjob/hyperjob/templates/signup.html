@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperJob Agency :: Signup</title>
+</head>
+<body>
+<h2>Signup</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+<h3>Already Have an Account??</h3>
+<a href = "{% url 'login' %}">Log In Here</a>
+</body>
+</html>

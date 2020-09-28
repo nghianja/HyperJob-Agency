@@ -16,6 +16,9 @@ class HyperJobTestRunner(HyperJobTest):
             # 3 task
             TestCase(attach=self.check_vacancies),
             TestCase(attach=self.check_resumes),
+            # 4 task
+            TestCase(attach=self.check_signup),
+            TestCase(attach=self.check_login),
         ]
 
     def check(self, reply, attach):
