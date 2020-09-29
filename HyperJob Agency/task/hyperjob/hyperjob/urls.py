@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import RedirectView
-from .views import menu, signin, signup
-from vacancy.views import vacancies
-from resume.views import resumes
+from .views import menu, signin, signup, home
+from vacancy.views import vacancies, new_vacancy
+from resume.views import resumes, new_resume
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,9 @@ urlpatterns = [
     path('login/', RedirectView.as_view(url='/login')),
     path('signup/', RedirectView.as_view(url='/signup')),
     path('vacancies/', vacancies, name='vacancies'),
-    path('resumes/', resumes, name='resumes')
+    path('vacancy/new', new_vacancy, name='new_vacancy'),
+    path('resumes/', resumes, name='resumes'),
+    path('resume/new', new_resume, name='new_resume'),
+    path('home', home, name='home'),
+    path('home/', RedirectView.as_view(url='/home'))
 ]

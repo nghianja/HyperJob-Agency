@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperJob Agency :: Home</title>
+</head>
+<body>
+<h2>Home</h2>
+<form method="post" action="{{action}}">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+{% if entries %}
+    {% for entry in entries %}
+        <div>{{ entry.author }}: {{ entry.description }}</div>
+    {% endfor %}
+{% else %}
+    <p>No entries are available.</p>
+{% endif %}
+</body>
+</html>
